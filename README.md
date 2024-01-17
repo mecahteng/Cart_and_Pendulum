@@ -1,4 +1,5 @@
 Cart and Pendulum Control Simulation
+
 This repository contains a MATLAB implementation of a control simulation for a cart-and-pendulum system. The primary goal is to optimize a control input that drives the system to a specified target point while minimizing the distance traveled.
 
 Overview
