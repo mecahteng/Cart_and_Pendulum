@@ -1,10 +1,38 @@
-Problem statement
-The cart-and-pendulum system moves along an infinitely-long and frictionless horizontal track. The
-pendulum’s joint is also frictionless. The cart is moved by the input force u. The equations of motion for this system
-are as follows:
-(m +M)¨x = −ml ¨ϕ cos ϕ + ml ˙ϕ2 sin ϕ + u (1)
-l ¨ϕ = −g sin ϕ − ¨x cos ϕ (2)
-where x and ϕ are the cart’s position and the pendulum’s angle respectively. The cart and pendulum masses are
-M = 3 kg, and m = 1 kg, and the pendulum length is l = 1 m. Take g = 9.81 m/s2 to be downward.
-The cart and pendulum are initially at rest, with the cart at x = 0 and the pendulum vertically downward, ϕ = 0.
-The goal is to hit a target located at T = (1m, 0.5m) with the tip of the pendulum at precisely t = 2 s.
+Cart and Pendulum Control Simulation
+This repository contains a MATLAB implementation of a control simulation for a cart-and-pendulum system. The primary goal is to optimize a control input that drives the system to a specified target point while minimizing the distance traveled.
+
+Overview
+The main codes consists of the following sections:
+
+Parameters
+M: Mass of the cart (kg)
+m: Mass of the pendulum (kg)
+l: Length of the pendulum (m)
+g: Acceleration due to gravity (m/s^2)
+Time Span for Simulation
+t_range: Time span for the simulation (start and end times)
+Target Point
+T: Target point for the tip of the pendulum (specified as [x-coordinate, y-coordinate])
+Optimization
+Utilizes fmincon to find optimal coefficients for the control input
+Initial guess: initial_guess
+Optimization algorithm: Sequential Quadratic Programming (sqp)
+Simulation
+Solves the differential equations describing the system dynamics
+Simulates the system with the optimized control input
+Extracts and stores the system states over time
+Results Illustration
+Animation of the cart-and-pendulum system
+Plots showing the optimized control input, state variables, and pendulum trajectory
+Usage
+Run the main.m script.
+Observe the animated simulation and plots illustrating the system's behavior and control performance.
+Dependencies
+MATLAB R2020a or later
+License
+This code is licensed under the MIT License.
+
+Acknowledgments
+The implementation is based on classical control theory and uses optimization techniques for control input optimization.
+
+Feel free to explore, modify, and use this code for educational and research purposes. If you find it helpful, consider giving credit or citing this repository. Contributions and improvements are welcome!
